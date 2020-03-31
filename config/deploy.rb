@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+load 'lib/deploy/seed.rb'
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.12.1'
 
