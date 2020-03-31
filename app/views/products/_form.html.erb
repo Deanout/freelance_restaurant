@@ -70,12 +70,12 @@
     <%= form.label :featured %>
     <%= form.check_box :featured %>
 </div>
-
+<% unless @product.category.nil? %>
 <div class="field">
     <%= form.label :category%>
     <%= form.select :category_id, options_from_collection_for_select(Category.all, :id, :heading, @product.category.id) %>
 </div>
-
+<% end %>
 <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
