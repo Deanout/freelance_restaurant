@@ -2,7 +2,6 @@
 
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
-  before_action :check_categories, only: %i[new create edit update]
 
   # GET /products
   # GET /products.json
@@ -65,10 +64,6 @@ class ProductsController < ApplicationController
   end
 
   private
-
-  def check_categories
-    redirect_to new_category_path if Category.count == 0
-  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_product
