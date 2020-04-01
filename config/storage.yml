@@ -14,7 +14,7 @@ amazon:
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
   region: nyc3
   bucket: restaurant
-  endpoint: 'nyc3.digitaloceanspaces.com'
+  endpoint: 'https://nyc3.digitaloceanspaces.com'
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
